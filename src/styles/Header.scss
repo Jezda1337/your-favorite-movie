@@ -1,0 +1,97 @@
+@import "./components/Mixins.scss";
+
+.header {
+  @include d-flex() {
+    justify-content: getJustify(sb);
+    align-items: getAlign(c);
+  }
+  margin: 0 auto;
+  min-height: 6rem;
+  height: 100%;
+  background: rgb(235, 235, 235);
+  width: 100%;
+  padding: 0 2rem;
+  position: relative;
+
+  @include breakpoints(tablet) {
+    padding: 0 6rem;
+  }
+
+  @include breakpoints(desktop) {
+    padding: 0 8rem;
+  }
+
+  &__logo {
+    font-size: 2rem;
+    color: #000;
+  }
+
+  &__menu {
+    height: max-content;
+    display: flex;
+    text-align: center;
+
+    @include breakpoints(desktop) {
+      @include d-flex() {
+        align-items: getAlign(c);
+      }
+    }
+  }
+
+  .icon {
+    font-size: 2rem;
+    @include breakpoints(desktop) {
+      display: none;
+    }
+  }
+
+  &__search-icon {
+    margin-right: 2.5rem;
+  }
+
+  &__item {
+    margin: 1.5rem 0;
+
+    @include breakpoints(desktop) {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  // &__item:not(:last-child) {
+  //   margin-right: 2rem;
+  // }
+
+  &__link {
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    display: none;
+
+    @include breakpoints(desktop) {
+      display: block;
+    }
+  }
+
+  &__search {
+    padding: 0.6rem 1.3rem;
+    border-radius: 100rem;
+    border: 3px solid #cecece;
+    font-size: 1.4rem;
+    color: gray;
+    letter-spacing: 0.08rem;
+    display: none;
+
+    @include breakpoints(desktop) {
+      display: block;
+    }
+
+    &::placeholder {
+      opacity: 0.8;
+      font-size: 1.4rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
