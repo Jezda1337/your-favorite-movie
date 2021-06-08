@@ -1,6 +1,10 @@
-import "styles/Header.scss";
+import "styles/components/Header.scss";
 import {FaSearch, FaThList} from 'react-icons/fa';
-const Header = () => {
+
+const Header = ({isOpen, setOpen}) => {
+   const open = ()=>{
+    setOpen(!isOpen)
+   }
     return (
         <nav className="header">
             <a className="header__logo" href="/">
@@ -9,7 +13,7 @@ const Header = () => {
             <ul className="header__menu open">
                 <li className="header__item">
                     <input className="header__search" type="search" placeholder='Quick Search'/>
-                    <FaSearch className="header__search-icon icon"/>
+                    <FaSearch className="header__search-icon icon" onClick={open}/>
                 </li>
                 <li className="header__item">
                     <a className="header__link" href="/">Home</a>

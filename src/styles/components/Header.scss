@@ -1,4 +1,4 @@
-@import "./components/Mixins.scss";
+@import "../Mixins.scss";
 
 .header {
   @include d-flex() {
@@ -7,11 +7,12 @@
   }
   margin: 0 auto;
   min-height: 6rem;
-  height: 100%;
+  // height: 100%;
   background: rgb(235, 235, 235);
   width: 100%;
   padding: 0 2rem;
-  position: relative;
+  position: fixed;
+  top: 0;
 
   @include breakpoints(tablet) {
     padding: 0 6rem;
