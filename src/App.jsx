@@ -21,7 +21,7 @@ const App = () => {
       </main>
 =======
             {/* <Card/> */}
-        </main>
+    </main>
 >>>>>>> c26524ce69f72bccbf68a653d780fb0aa2edbd16
     </>
   );
