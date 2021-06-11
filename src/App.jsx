@@ -15,7 +15,7 @@ const App = () => {
         <main className="main">
             <Search isOpen={isOpen}/>
 
-            <Card/>
+            {/* <Card/> */}
         </main>
     </>
 }
