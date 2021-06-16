@@ -8,7 +8,6 @@ const App = () => {
   let [isOpen, setOpen] = useState(false);
   console.log(isOpen);
 
-<<<<<<< HEAD
   return (
     <>
       <header>
@@ -19,10 +18,8 @@ const App = () => {
 
         <Card />
       </main>
-=======
-            {/* <Card/> */}
+      {/* <Card/> */}
     </main>
->>>>>>> c26524ce69f72bccbf68a653d780fb0aa2edbd16
     </>
   );
 };
